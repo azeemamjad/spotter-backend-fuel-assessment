@@ -1,14 +1,14 @@
 # Spotter backend fuel assessment
 
-[GitHub](https://github.com/azeemamjad/spotter-backend-fuel-assessment) Â· Django **6.1.2**, Python **3.14.7** verified.
+[GitHub](https://github.com/azeemamjad/spotter-backend-fuel-assessment) Ã‚Â· Django **6.1.2**, Python **3.14.7** verified.
 
 This independent backend assessment returns an OSRM road route, cost-effective fuel purchases, tank-balance checks, measured provider diagnostics and a saved interactive map. The vehicle holds **50 US gallons**, achieves **10 MPG** and has **500 miles** maximum range. Initial fuel is already owned; purchase cost excludes it and trip consumption is reported separately.
 
-**Coverage limitation:** the actual employer CSV is imported, but only **105 of 6,626 US stations (1.58%)** have accepted coordinates: 75 Census Exact street-address matches 4 verified official Love's station locations and 26 strictly identity-matched OSM truck-fuel POIs. The other **6,521** remain excluded. Optimization uses this located subset on the selected route; it does not claim nationwide optimality. Both demonstrated Chicagoâ€“Denver fuel stops use official station coordinates.
+**Coverage limitation:** the actual employer CSV is imported, but only **105 of 6,626 US stations (1.58%)** have accepted coordinates: 75 Census Exact street-address matches, 4 verified official Love's station locations and 26 strictly identity-matched OSM truck-fuel POIs. The other **6,521** remain excluded. Optimization uses this located subset on the selected route; it does not claim nationwide optimality. Both demonstrated ChicagoÃ¢â‚¬â€œDenver fuel stops use official station coordinates.
 
 ## Reproduce locally
 
-Use Python 3.12â€“3.14. From this directory in PowerShell:
+Use Python 3.12Ã¢â‚¬â€œ3.14. From this directory in PowerShell:
 
 ```powershell
 py -3.14 -m venv .venv
@@ -24,7 +24,7 @@ Copy-Item .env.example .env
 
 Open [the planner](http://127.0.0.1:8002/) or use `delivery/backend.postman_collection.json`. Port 8000 is occupied by an unrelated application in this workspace; the root launcher defaults to 8002. The original file was copied from `C:\Users\Azeem\Downloads\fuel-prices-for-be-assessment.csv`, preserving the original. It is not committed. Reviewers need that employer attachment; source code and coordinate-only crosswalk are committed.
 
-`.env.example` documents debug, secret, allowed hosts, OSRM URL, timeout and station corridor. No API key is needed. For production use a strong secret, `DJANGO_DEBUG=0`, appropriate hosts and a WSGI server such as Waitress. Backend hosting is optional; GitHub and a â‰¤5-minute Loom are required. A Loom has not been supplied or recorded.
+`.env.example` documents debug, secret, allowed hosts, OSRM URL, timeout and station corridor. No API key is needed. For production use a strong secret, `DJANGO_DEBUG=0`, appropriate hosts and a WSGI server such as Waitress. Backend hosting is optional; GitHub and a Ã¢â€°Â¤5-minute Loom are required. A Loom has not been supplied or recorded.
 
 ## Actual source inspection and import policy
 
@@ -61,7 +61,7 @@ Optional future preparation: `python manage.py enrich_stations --census` submits
 {"origin":"Chicago, IL","destination":"Denver, CO","initial_fuel_gallons":50}
 ```
 
-Cities require a state when ambiguous. Coordinates are also accepted as `{"latitude":41.85,"longitude":-87.65}` and verified against US Census state/DC boundaries; territories are excluded. Initial fuel defaults to 50 and accepts 0â€“50. A nonstation origin cannot sell fuel.
+Cities require a state when ambiguous. Coordinates are also accepted as `{"latitude":41.85,"longitude":-87.65}` and verified against US Census state/DC boundaries; territories are excluded. Initial fuel defaults to 50 and accepts 0Ã¢â‚¬â€œ50. A nonstation origin cannot sell fuel.
 
 Responses contain resolved locations, road GeoJSON/distance/duration, ordered stops with coordinate source/price/route mile/purchases/tank balances, every leg's arrival balance, gallons/cost/consumption/destination balance, assumptions, saved `map_url` and metadata. Money is a decimal string. Metadata measures provider calls, cache hits, milliseconds, corridor candidates and located/unlocated dataset counts. Saved maps persist at `GET /map/<id>/`; `GET /` is the planner and `GET /api/health/` reports dataset readiness/counts.
 
@@ -78,7 +78,7 @@ The optimizer is exact for continuous fuel purchases on **one fixed route, zero 
 
 ## Verified real demonstration
 
-Chicago, IL â†’ Denver, CO, initial 50 gallons, default 2-mile corridor, after rejecting Non_Exact results:
+Chicago, IL Ã¢â€ â€™ Denver, CO, initial 50 gallons, default 2-mile corridor, after rejecting Non_Exact results:
 
 | Result | Observed value |
 |---|---:|
@@ -113,8 +113,12 @@ All successful routes passed leg/tank-balance assertions. Chicago to Denver used
 
 **25 tests pass**, covering fuel boundaries, multi-stop costs, infeasible gaps, 108 exhaustive oracle comparisons, road projection, API validation/maps, geocode/country checks, malformed locations/huge numbers, actual-style schema import, 8-place prices, duplicate/non-US policy, multiline addresses, coordinate persistence, Non_Exact rejection and Exact locality mismatch rejection. Providers are mocked in automated tests; live routing/geocoding/coordinate-country checks and the real multi-stop API were verified separately.
 
-Use the committed Postman collection and `delivery/WALKTHROUGH.md` for the â‰¤5-minute Loom. Submit the actual [GitHub link](https://github.com/azeemamjad/spotter-backend-fuel-assessment) and a working Loom through the **backend** questionnaire. No Loom was fabricated or assessment form submitted.
+Use the committed Postman collection and `delivery/WALKTHROUGH.md` for the Ã¢â€°Â¤5-minute Loom. Submit the actual [GitHub link](https://github.com/azeemamjad/spotter-backend-fuel-assessment) and a working Loom through the **backend** questionnaire. No Loom was fabricated or assessment form submitted.
 
 ## Attribution
 
-[Django stable release](https://www.djangoproject.com/download/) Â· [OSRM](https://project-osrm.org/docs/v5.24.0/api/#route-service) Â· [Open-Meteo/GeoNames](https://open-meteo.com/en/docs/geocoding-api) Â· [US Census](https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html) Â· [OpenFreeMap](https://openfreemap.org/quick_start/) Â· MapLibre GL JS 5.6.1. OpenFreeMap styles include OpenMapTiles/OpenStreetMap attribution. Check service availability/terms for production; public demo services carry no availability guarantee. The map requires internet/WebGL.
+[Django stable release](https://www.djangoproject.com/download/) Ã‚Â· [OSRM](https://project-osrm.org/docs/v5.24.0/api/#route-service) Ã‚Â· [Open-Meteo/GeoNames](https://open-meteo.com/en/docs/geocoding-api) Ã‚Â· [US Census](https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html) Ã‚Â· [OpenFreeMap](https://openfreemap.org/quick_start/) Ã‚Â· MapLibre GL JS 5.6.1. OpenFreeMap styles include OpenMapTiles/OpenStreetMap attribution. Check service availability/terms for production; public demo services carry no availability guarantee. The map requires internet/WebGL.
+
+## Reviewer access
+
+This repository was made **public on 3 November 2026**, after the owner explicitly approved public visibility following source/history review. Anonymous GitHub API and web requests returned HTTP 200. The original employer CSV, databases, caches, virtual environments and `.env` files remain excluded. Public read access requires no collaborator invitation.
