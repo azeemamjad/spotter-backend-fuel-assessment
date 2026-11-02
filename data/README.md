@@ -1,0 +1,1 @@
+Place the employer's actual `fuel-prices-for-be-assessment.csv` here. It is intentionally not replaced with synthetic data. See the parent README for inspection, import and persisted coordinate enrichment. CSV files in this directory are ignored by git to avoid silently redistributing the employer attachment.

@@ -1,0 +1,82 @@
+{
+  "info": {
+    "name": "Spotter backend fuel assessment",
+    "description": "Local demonstration requests. Run migrations and import/enrich the original employer CSV before successful planning requests. Small synthetic test fixtures are not the final dataset. Initial fuel is already owned and excluded from purchase cost.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://127.0.0.1:8002" }
+  ],
+  "item": [
+    {
+      "name": "Health and real dataset readiness",
+      "request": { "method": "GET", "url": "{{base_url}}/api/health/" },
+      "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": [
+        "pm.test('Health endpoint responds', () => pm.response.to.have.status(200));",
+        "const data = pm.response.json();",
+        "pm.test('Original station data is ready for demonstration', () => pm.expect(data.dataset_ready).to.eql(true));"
+      ] }}]
+    },
+    {
+      "name": "Long trip — purchased fuel and saved map",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"origin\": \"Chicago, IL, USA\",\n  \"destination\": \"Denver, CO, USA\",\n  \"initial_fuel_gallons\": 50\n}" },
+        "url": "{{base_url}}/api/route-plan/",
+        "description": "Inspect each purchase and open the returned map_url in a browser. Repeat to see cache diagnostics. For a several-purchase demo, edit the destination to a longer route supported by the real station coverage."
+      },
+      "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": [
+        "pm.test('A feasible real-data plan is returned', () => pm.response.to.have.status(200));",
+        "if (pm.response.code === 200) {",
+        "  const data = pm.response.json();",
+        "  pm.collectionVariables.set('map_url', data.map_url);",
+        "  pm.test('Map URL is present', () => pm.expect(data.map_url).to.be.a('string'));",
+        "  pm.test('Displayed purchase costs reconcile', () => {",
+        "    const cents = data.fuel_stops.reduce((sum, stop) => sum + Math.round(Number(stop.purchase_cost_usd) * 100), 0);",
+        "    pm.expect(cents).to.eql(Math.round(Number(data.total_purchase_cost_usd) * 100));",
+        "  });",
+        "  pm.test('Fuel stops respect tank capacity and nonnegative balances', () => data.fuel_stops.forEach(stop => {",
+        "    pm.expect(stop.fuel_on_arrival_gallons).to.be.at.least(-0.000001);",
+        "    pm.expect(stop.fuel_on_departure_gallons).to.be.at.most(50.000001);",
+        "  }));",
+        "  pm.test('All reported route legs are feasible', () => data.legs.forEach(leg => pm.expect(leg.fuel_on_arrival_gallons).to.be.at.least(-0.000001)));",
+        "}"
+      ] }}]
+    },
+    {
+      "name": "Short trip — already-owned initial fuel",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"origin\": \"Chicago, IL, USA\",\n  \"destination\": \"Milwaukee, WI, USA\",\n  \"initial_fuel_gallons\": 50\n}" },
+        "url": "{{base_url}}/api/route-plan/",
+        "description": "A short trip with sufficient already-owned fuel requires zero new purchases. It still consumes fuel; consumption is returned separately."
+      },
+      "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": [
+        "pm.test('Short route returns a plan', () => pm.response.to.have.status(200));",
+        "if (pm.response.code === 200) { const data = pm.response.json(); pm.test('No new purchase needed with full initial tank', () => pm.expect(Number(data.total_purchase_cost_usd)).to.eql(0)); }"
+      ] }}]
+    },
+    {
+      "name": "Validation — missing origin",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"destination\": \"Denver, CO, USA\"\n}" },
+        "url": "{{base_url}}/api/route-plan/"
+      },
+      "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('Missing required input returns 400', () => pm.response.to.have.status(400));"] }}]
+    },
+    {
+      "name": "Validation — initial fuel exceeds tank capacity",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"origin\": \"Chicago, IL, USA\",\n  \"destination\": \"Denver, CO, USA\",\n  \"initial_fuel_gallons\": 51\n}" },
+        "url": "{{base_url}}/api/route-plan/"
+      },
+      "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('Over-capacity initial fuel returns 400', () => pm.response.to.have.status(400));"] }}]
+    }
+  ]
+}
