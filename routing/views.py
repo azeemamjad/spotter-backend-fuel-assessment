@@ -78,6 +78,14 @@ def route_plan(request):
         SavedPlan.objects.create(id=plan_id, result=result)
         return JsonResponse(result)
     except PlanError as exc:
-        return JsonResponse({'error': {'code': exc.code, 'message': exc.message}}, status=exc.status)
+        error = {'code': exc.code, 'message': exc.message}
+        if exc.code == 'infeasible_route':
+            error['message'] = 'No feasible plan was found in the loaded station subset. ' + exc.message
+            total = Station.objects.count()
+            located = Station.objects.filter(latitude__isnull=False, longitude__isnull=False).count()
+            error['details'] = {'total_priced_stations': total, 'geolocated_stations': located,
+                                'unlocated_stations': total-located,
+                                'scope': 'Unresolved stations are excluded; this does not prove that no real refueling trip exists.'}
+        return JsonResponse({'error': error}, status=exc.status)
     except DatabaseError:
         return JsonResponse({'error': {'code': 'database_unavailable', 'message': 'Database unavailable. Run migrations and verify the station import.'}}, status=503)

@@ -14,3 +14,5 @@ data/*.csv
 
 # Local bulk POI research, not accepted station coordinates.
 data/osm-truckstop-pois.json
+
+data/osm-strict-candidates.json

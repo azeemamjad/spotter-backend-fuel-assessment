@@ -50,3 +50,15 @@ class ApiTests(TestCase):
         Station.objects.create(source_id='far',name='Far',address='Test',latitude=41,longitude=-85,price='1')
         candidates,stats=match_stations(ROUTE)
         self.assertEqual(len(candidates),1);self.assertEqual(candidates[0]['mile'],300)
+
+    @patch('routing.views.road_route', return_value=ROUTE)
+    @patch('routing.views.resolve_location', return_value={'label':'Fixture','latitude':40,'longitude':-90})
+    def test_infeasibility_discloses_incomplete_station_subset(self, resolve, road):
+        Station.objects.create(source_id='far', name='Outside corridor', address='Fixture', latitude=42, longitude=-85, price='3')
+        Station.objects.create(source_id='unknown', name='Unlocated', address='Fixture', price='2')
+        response = self.post({'origin':'A','destination':'B'})
+        self.assertEqual(response.status_code, 422)
+        error = response.json()['error']
+        self.assertIn('loaded station subset', error['message'])
+        self.assertEqual(error['details']['geolocated_stations'], 1)
+        self.assertEqual(error['details']['unlocated_stations'], 1)

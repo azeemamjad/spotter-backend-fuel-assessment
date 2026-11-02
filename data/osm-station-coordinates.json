@@ -1,0 +1,685 @@
+[
+  {
+    "source_id": "1914",
+    "latitude": 38.9951634,
+    "longitude": -110.1846557,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/way/325139238",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Love's",
+        "name": "Love's Travel Stop",
+        "website": "https://www.loves.com/locations/792",
+        "addr:city": "Green River",
+        "addr:state": "UT",
+        "addr:street": "West Main Street",
+        "addr:housenumber": "1080",
+        "hgv": "yes"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/way/325139238"
+      ]
+    }
+  },
+  {
+    "source_id": "2923",
+    "latitude": 37.9375913,
+    "longitude": -77.4663015,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/way/781067019",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Love's",
+        "ref": "435",
+        "name": "Love's",
+        "addr:city": "Ruther Glen",
+        "addr:state": "VA",
+        "addr:street": "Rogers Clark Boulevard",
+        "addr:housenumber": "23845",
+        "hgv": "yes"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/way/781067019"
+      ]
+    }
+  },
+  {
+    "source_id": "52471",
+    "latitude": 40.8322871,
+    "longitude": -83.9673143,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/way/229321016",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Flying J",
+        "name": "Flying J #695",
+        "website": "https://www.pilotflyingj.com/stores/695/",
+        "addr:city": "Beaverdam",
+        "addr:state": "OH",
+        "addr:street": "East Main Street",
+        "addr:housenumber": "420",
+        "hgv": "yes"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/way/229321016"
+      ]
+    }
+  },
+  {
+    "source_id": "64755",
+    "latitude": 38.9396571,
+    "longitude": -92.774345,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/way/554602290",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Pilot",
+        "name": "Pilot",
+        "website": "https://pilotflyingj.com/stores/44",
+        "addr:city": "Boonville",
+        "addr:state": "MO",
+        "addr:street": "West Ashley Road",
+        "addr:housenumber": "1701",
+        "hgv": "yes",
+        "fuel:HGV_diesel": "yes"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/way/554602290"
+      ]
+    }
+  },
+  {
+    "source_id": "65033",
+    "latitude": 40.8338361,
+    "longitude": -83.9652468,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/way/229320513",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Pilot",
+        "name": "Pilot Travel Center #457",
+        "website": "https://www.pilotflyingj.com/stores/457/",
+        "addr:city": "Beaverdam",
+        "addr:state": "OH",
+        "addr:street": "East Main Street",
+        "addr:housenumber": "427",
+        "hgv": "yes"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/way/229320513"
+      ]
+    }
+  },
+  {
+    "source_id": "66040",
+    "latitude": 35.19961,
+    "longitude": -113.903988,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/way/223539583",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Love's",
+        "name": "Love's Truck Lanes",
+        "website": "https://www.loves.com/locations/272",
+        "addr:city": "Kingman",
+        "addr:state": "AZ",
+        "addr:street": "East Minerva Lane",
+        "addr:housenumber": "6035",
+        "hgv": "yes"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/way/223539583"
+      ]
+    }
+  },
+  {
+    "source_id": "66120",
+    "latitude": 36.0119881,
+    "longitude": -83.5323062,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/node/6616599586",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Love's",
+        "ref": "306",
+        "name": "Love's",
+        "website": "https://www.loves.com/locations/306",
+        "addr:city": "Dandridge",
+        "addr:state": "TN",
+        "addr:street": "Deep Springs Road",
+        "addr:housenumber": "1058",
+        "hgv": "yes"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/node/6616599586"
+      ]
+    }
+  },
+  {
+    "source_id": "66478",
+    "latitude": 39.019141,
+    "longitude": -95.5084179,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/way/379404861",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Love's",
+        "ref": "175",
+        "name": "Love's",
+        "website": "https://www.loves.com/locations/175",
+        "addr:city": "Tecumseh",
+        "addr:state": "KS",
+        "addr:street": "Kansas Turnpike",
+        "addr:housenumber": "Mile 188",
+        "fuel:HGV_diesel": "yes"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/way/379404861"
+      ]
+    }
+  },
+  {
+    "source_id": "66747",
+    "latitude": 42.4555849,
+    "longitude": -88.9981138,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/way/225052242",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Love's",
+        "name": "Love's",
+        "website": "https://www.loves.com/locations/322",
+        "addr:city": "Roscoe",
+        "addr:state": "IL",
+        "addr:street": "Quality Drive",
+        "hgv": "only"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/way/225052242"
+      ]
+    }
+  },
+  {
+    "source_id": "66912",
+    "latitude": 37.7257749,
+    "longitude": -113.0519551,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/way/225054742",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Love's",
+        "name": "Love's Truck Lanes",
+        "website": "https://www.loves.com/locations/335",
+        "addr:city": "Cedar City",
+        "addr:state": "UT",
+        "addr:street": "North Canyon Ranch Drive",
+        "addr:housenumber": "2645",
+        "hgv": "yes"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/way/225054742"
+      ]
+    }
+  },
+  {
+    "source_id": "66937",
+    "latitude": 37.9818611,
+    "longitude": -91.7189582,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/way/677336597",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Love's",
+        "name": "Love's",
+        "website": "https://www.loves.com/locations/341",
+        "addr:city": "Rolla",
+        "addr:state": "MO",
+        "addr:street": "Hy Point Industrial Park Drive",
+        "addr:housenumber": "3500",
+        "hgv": "yes"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/way/677336597"
+      ]
+    }
+  },
+  {
+    "source_id": "67037",
+    "latitude": 40.9965463,
+    "longitude": -81.9943785,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/way/225055027",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Love's",
+        "ref": "332",
+        "name": "Love's",
+        "website": "http://myloves332.com/",
+        "addr:city": "Burbank",
+        "addr:state": "OH",
+        "addr:street": "Avon Lake Road",
+        "addr:housenumber": "10145",
+        "hgv": "designated"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/way/225055027"
+      ]
+    }
+  },
+  {
+    "source_id": "67624",
+    "latitude": 39.7407236,
+    "longitude": -104.4343359,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/way/224603696",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Love's",
+        "name": "Love's",
+        "website": "https://www.loves.com/locations/300",
+        "addr:city": "Bennett",
+        "addr:state": "CO",
+        "addr:street": "South 1st Street",
+        "addr:housenumber": "1191",
+        "hgv": "yes"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/way/224603696"
+      ]
+    }
+  },
+  {
+    "source_id": "69073",
+    "latitude": 40.1629727,
+    "longitude": -111.6518549,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/way/923227496",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Love's",
+        "name": "Love's Diesel Lanes",
+        "website": "https://www.loves.com/locations/518",
+        "addr:city": "Springville",
+        "addr:state": "UT",
+        "addr:street": "South 2200 West",
+        "addr:housenumber": "358",
+        "hgv": "yes"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/way/923227496"
+      ]
+    }
+  },
+  {
+    "source_id": "69307",
+    "latitude": 38.8905214,
+    "longitude": -89.8345319,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/way/1324624103",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Love's",
+        "name": "Love's",
+        "website": "https://www.loves.com/locations/578",
+        "addr:city": "Hamel",
+        "addr:state": "IL",
+        "addr:street": "State Route 140",
+        "addr:housenumber": "9191",
+        "hgv": "yes"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/way/1324624103"
+      ]
+    }
+  },
+  {
+    "source_id": "69741",
+    "latitude": 33.4583125,
+    "longitude": -112.2398521,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/way/1004594293",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Love's",
+        "name": "Love's",
+        "website": "https://www.loves.com/locations/659",
+        "addr:city": "Tolleson",
+        "addr:state": "AZ",
+        "addr:street": "West Roosevelt Street",
+        "addr:housenumber": "8313",
+        "hgv": "yes"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/way/1004594293"
+      ]
+    }
+  },
+  {
+    "source_id": "69837",
+    "latitude": 41.5993019,
+    "longitude": -87.5794969,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/way/1259728861",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Love's",
+        "name": "Love's",
+        "website": "https://www.loves.com/locations/606",
+        "addr:city": "South Holland",
+        "addr:state": "IL",
+        "addr:street": "East 162nd Street",
+        "addr:housenumber": "1533",
+        "hgv": "only"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/way/1259728861"
+      ]
+    }
+  },
+  {
+    "source_id": "69995",
+    "latitude": 32.0841924,
+    "longitude": -110.8030681,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/way/855741041",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Pilot",
+        "ref": "1178",
+        "name": "Pilot Express",
+        "website": "https://locations.pilotflyingj.com/us/az/tucson/9255-s-rita-road",
+        "addr:city": "Tucson",
+        "addr:state": "AZ",
+        "addr:street": "South Rita Road",
+        "addr:housenumber": "9255",
+        "hgv": "designated"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/way/855741041"
+      ]
+    }
+  },
+  {
+    "source_id": "70107",
+    "latitude": 40.6532803,
+    "longitude": -82.5465589,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/way/1017955890",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Love's",
+        "name": "Love's (Trucks)",
+        "website": "https://www.loves.com/locations/711",
+        "addr:city": "Bellville",
+        "addr:state": "OH",
+        "addr:street": "State Route 97",
+        "addr:housenumber": "976",
+        "hgv": "only"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/way/1017955890"
+      ]
+    }
+  },
+  {
+    "source_id": "70157",
+    "latitude": 42.4621813,
+    "longitude": -92.403849,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/way/1073996101",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Love's",
+        "ref": "702",
+        "name": "Love's",
+        "addr:city": "Waterloo",
+        "addr:state": "IA",
+        "addr:street": "Greyhound Drive",
+        "addr:housenumber": "3301",
+        "hgv": "yes"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/way/1073996101"
+      ]
+    }
+  },
+  {
+    "source_id": "70592",
+    "latitude": 34.1396983,
+    "longitude": -80.7489165,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/node/10228325504",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Love's",
+        "name": "Love's",
+        "website": "https://www.loves.com/locations/751",
+        "addr:city": "Elgin",
+        "addr:state": "SC",
+        "addr:street": "White Pond Road",
+        "addr:housenumber": "701",
+        "hgv": "only"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/node/10228325504"
+      ]
+    }
+  },
+  {
+    "source_id": "71262",
+    "latitude": 39.9446953,
+    "longitude": -82.6785432,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/way/1236321435",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Love's",
+        "ref": "892",
+        "name": "Love's",
+        "website": "https://www.loves.com/locations/892",
+        "addr:city": "Etna",
+        "addr:state": "OH",
+        "addr:street": "Schuster Way",
+        "addr:housenumber": "9901",
+        "hgv": "designated"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/way/1236321435"
+      ]
+    }
+  },
+  {
+    "source_id": "71318",
+    "latitude": 41.9988998,
+    "longitude": -87.9611208,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/way/1259770389",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Love's",
+        "name": "Love's",
+        "website": "https://www.loves.com/locations/800",
+        "addr:city": "Elk Grove Village",
+        "addr:state": "IL",
+        "addr:street": "Busse Road",
+        "addr:housenumber": "1900",
+        "fuel:HGV_diesel": "yes"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/way/1259770389"
+      ]
+    }
+  },
+  {
+    "source_id": "71487",
+    "latitude": 38.9478346,
+    "longitude": -112.3525243,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/way/1092683302",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Love's",
+        "name": "Love's Travel Stop",
+        "website": "https://www.loves.com/locations/835",
+        "addr:city": "Fillmore",
+        "addr:state": "UT",
+        "addr:street": "South 1100 West Street",
+        "addr:housenumber": "915",
+        "hgv": "only"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/way/1038853917",
+        "https://www.openstreetmap.org/way/1092683302"
+      ]
+    }
+  },
+  {
+    "source_id": "71490",
+    "latitude": 33.6479177,
+    "longitude": -85.5057501,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/node/13770704758",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Love's",
+        "name": "Love's",
+        "website": "https://www.loves.com/locations/818",
+        "addr:city": "Heflin",
+        "addr:state": "AL",
+        "addr:street": "AL 46",
+        "addr:housenumber": "6647",
+        "hgv": "designated",
+        "fuel:HGV_diesel": "yes"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/node/13770704758"
+      ]
+    }
+  },
+  {
+    "source_id": "7263",
+    "latitude": 41.0521895,
+    "longitude": -102.0705214,
+    "provenance": {
+      "provider": "OpenStreetMap_identity_match",
+      "source_url": "https://www.openstreetmap.org/node/7502086792",
+      "snapshot_time": "2026-11-02T16:58:27Z",
+      "license": "ODbL-1.0",
+      "match_type": "exact_brand_store_city_state_with_truck_evidence",
+      "coordinate_accuracy": "OSM point or bounding-box center of truck fuel POI; access detours unverified",
+      "matched_tags": {
+        "brand": "Flying J",
+        "name": "Flying J",
+        "website": "https://www.pilotflyingj.com/stores/904/",
+        "addr:city": "Big Springs",
+        "addr:state": "NE",
+        "addr:street": "Circle Road",
+        "addr:housenumber": "109",
+        "hgv": "designated"
+      },
+      "corroborating_osm_urls": [
+        "https://www.openstreetmap.org/node/7502086792"
+      ]
+    }
+  }
+]
