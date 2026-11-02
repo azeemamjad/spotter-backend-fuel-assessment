@@ -47,5 +47,5 @@ def match_stations(route):
             if best is None or offset < best[0]:
                 best = offset,start+t*miles
         if best and best[0] <= corridor:
-            selected.append({'id': station.source_id, 'name': station.name, 'address': station.address, 'latitude': station.latitude, 'longitude': station.longitude, 'price': str(station.price), 'mile': best[1], 'offset_miles': round(best[0],4)})
+            selected.append({'id': station.source_id, 'name': station.name, 'address': station.address, 'latitude': station.latitude, 'longitude': station.longitude, 'coordinate_source': station.coordinate_source, 'price': str(station.price), 'mile': best[1], 'offset_miles': round(best[0],4)})
     return selected, {'stations_examined': examined, 'corridor_candidates': len(selected), 'corridor_miles': corridor, 'projection_distance_basis': 'OSRM road annotations' if len(annotations)==len(points)-1 else 'Polyline length scaled to provider road distance'}

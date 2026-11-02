@@ -1,41 +1,55 @@
 # Spotter backend fuel assessment
 
-Django 6.1.2 API for cost-effective fuel purchases along a US road route. It returns an actual OSRM road geometry, a feasible purchase plan, decimal money accounting, request diagnostics and a saved Leaflet map. The tank holds 50 US gallons, economy is 10 miles per gallon and maximum range is 500 miles.
+[GitHub](https://github.com/azeemamjad/spotter-backend-fuel-assessment) · Django **6.1.2**, Python **3.14.7** verified.
 
-## Run locally
+This independent backend assessment returns an OSRM road route, cost-effective fuel purchases, tank-balance checks, measured provider diagnostics and a saved interactive map. The vehicle holds **50 US gallons**, achieves **10 MPG** and has **500 miles** maximum range. Initial fuel is already owned; purchase cost excludes it and trip consumption is reported separately.
 
-Python 3.12–3.14 is supported; this workspace was verified with Python 3.14.7. From this directory in PowerShell:
+**Coverage limitation:** the actual employer CSV is imported, but only **79 of 6,626 US stations** have accepted coordinates: 75 Census Exact street-address matches and 4 verified official Love's station locations. The other **6,547** remain excluded. Optimization uses this located subset on the selected route; it does not claim nationwide optimality. Both demonstrated Chicago–Denver fuel stops use official station coordinates.
+
+## Reproduce locally
+
+Use Python 3.12–3.14. From this directory in PowerShell:
 
 ```powershell
 py -3.14 -m venv .venv
 .\.venv\Scripts\python -m pip install -r requirements-lock.txt
 Copy-Item .env.example .env
 .\.venv\Scripts\python manage.py migrate
+# Obtain the actual employer attachment and place it at the path below.
 .\.venv\Scripts\python manage.py import_stations data/fuel-prices-for-be-assessment.csv
-.\.venv\Scripts\python manage.py enrich_stations --census
-.\.venv\Scripts\python manage.py runserver 127.0.0.1:8000
+# Bundled coordinates/provenance reproduce the accepted subset without provider calls.
+.\.venv\Scripts\python manage.py enrich_stations --coordinates data/station-coordinates.json
+.\.venv\Scripts\python manage.py runserver 127.0.0.1:8002
 ```
 
-Open [the planner](http://127.0.0.1:8000/) or use Postman. Choose another port if 8000 is occupied; the workspace launcher defaults to **8002**. The backend requires no API key. `.env` configures debug, allowed hosts, secret, provider timeout, routing URL and station corridor; the actual names and sample values are in `.env.example`. For production, set a strong secret, `DJANGO_DEBUG=0`, appropriate hosts and serve `config.wsgi:application` through a production server. This project is intentionally independent of the full-stack assessment.
+Open [the planner](http://127.0.0.1:8002/) or use `delivery/backend.postman_collection.json`. Port 8000 is occupied by an unrelated application in this workspace; the root launcher defaults to 8002. The original file was copied from `C:\Users\Azeem\Downloads\fuel-prices-for-be-assessment.csv`, preserving the original. It is not committed. Reviewers need that employer attachment; source code and coordinate-only crosswalk are committed.
 
-## Real dataset preparation
+`.env.example` documents debug, secret, allowed hosts, OSRM URL, timeout and station corridor. No API key is needed. For production use a strong secret, `DJANGO_DEBUG=0`, appropriate hosts and a WSGI server such as Waitress. Backend hosting is optional; GitHub and a ≤5-minute Loom are required. A Loom has not been supplied or recorded.
 
-Obtain **fuel-prices-for-be-assessment.csv** from the employer's backend email and save it under `data/`. The actual file was not yet present when this implementation was tested. No synthetic station prices or guessed coordinates are loaded into the application. Until at least one valid geolocated station is present, the route endpoint returns `503 station_data_unavailable` before making external requests. Unit tests create artificial rows only inside temporary test databases.
+## Actual source inspection and import policy
 
-The importer accepts UTF-8 with an optional BOM and detects comma, semicolon or tab delimiters. It prints original headers, selected column mappings, total rows, created/updated/invalid/duplicate counts, unlocated count and examples of invalid records. Recognized headings include `OPIS Truckstop ID`, `Truckstop Name`, `Address`, `City`, `State`, `Retail Price`, `Latitude` and `Longitude`. This is a flexible mapping, **not a claim that the absent employer file has those columns**. If needed, supply actual header mappings:
+The supplied file is a **577,081-byte UTF-8 comma-delimited CSV**, inspected 2 November 2026, with **8,151 data rows** and exact headings:
 
-```powershell
-.\.venv\Scripts\python manage.py import_stations data/fuel-prices-for-be-assessment.csv --columns '{"name":"Station","price":"USD/Gallon","address":"Street"}'
+```text
+OPIS Truckstop ID,Truckstop Name,Address,City,State,Rack ID,Retail Price
 ```
 
-`--encoding cp1252` is available for a differently encoded source. Positive finite prices use Decimal with four stored decimal places. The source station ID is unique; when absent the normalized name/address/city/state tuple is hashed. The first valid row for an ID wins within one file and repeated imports update existing records. Rows without coordinates remain stored for enrichment. Invalid supplied coordinates are rejected. Reimporting a row without coordinates preserves previous enrichment. Verify fuel type, USD/US-gallon price units and source semantics against the actual file before submission; the planner interprets the imported retail price as USD per US gallon.
+There are no empty fields, coordinate columns or unparsable/nonpositive prices. Prices have up to **eight decimal places**, preserved with Decimal and an eight-place database field. The file includes US states and Canadian province codes. **620 Canadian rows** are excluded. The remaining rows contain **6,626 distinct US OPIS IDs**, plus **905 duplicate US rows**. **891 duplicates differ from their first retained row** in normalized fields such as name/price. No timestamp or fuel-type discriminator resolves competing observations. The explicit policy is **first valid US row per OPIS ID in file order**; later duplicates are counted/skipped. It does not assume the cheapest conflicting observation is available. Reimports update retained records and preserve enrichment.
 
-Coordinate enrichment happens once, never in a route request:
+No source columns explicitly establish currency, price denominator or fuel grade. The assessment's convention is implemented by interpreting Retail Price as **USD per US gallon**, fuel grade unspecified. Canadian observations are excluded instead of mixing possible currencies/units. Confirm any different employer clarification before submission.
 
-- `enrich_stations --census` submits up to 10,000 missing station street addresses to the US Census batch geocoder in one request. It persists returned matches and reports unmatched addresses. Census geocoding interpolates street-address locations; highway exit descriptions and incomplete addresses may not match. Review accuracy and resolve unmatched rows before a final demo.
-- `enrich_stations --coordinates verified-stations.csv` accepts a manually verified crosswalk with `source_id,latitude,longitude`. It updates only known station IDs. Never use city centroids as exact station locations.
+The importer reports actual mappings, rows, created/updated/duplicate/conflicting/non-US/invalid/unlocated counts. It validates prices after quantization, rejects invalid supplied coordinates, preserves quoted multiline fields and supports alternate encodings/delimiters. `--columns` accepts JSON mapping for changed headings; `--encoding cp1252` is available. OPIS ID is the stable identity; a source without IDs uses a normalized name/address/city/state hash.
 
-The original employer attachment and database are gitignored. Reviewers must obtain that same source file and reproduce preparation, or receive an authorized coordinate crosswalk alongside the submission. No assertion of full dataset coverage is made until the actual import and enrichment have run.
+## Coordinate provenance
+
+`data/station-coordinates.json` is a reproducible **79-row coordinate-only crosswalk with provenance**, without employer prices. API fuel stops expose `coordinate_source`.
+
+- **75 Census Exact matches:** `Public_AR_Current` address-batch results, additionally checked against source city/state. These are street-address interpolations; station property position/access remain approximate.
+- **4 official Love's POIs:** OPIS 67284 / Love's 390 North Platte,69177 / Love's 426 Shelby,66236 / Love's 309 Aurora,69710 / Love's 625 Sidney. Official pages identify OPIS/store number; coordinates come from their linked maps. See [source evidence](data/verified-i80-coordinate-provenance.md).
+
+The US Census batch returned 75 Exact, 451 Non_Exact, 5,857 No_Match and 243 Tie results. Non_Exact highway descriptors sometimes matched unrelated numbered streets or different cities and are **all rejected**. No city centroids or guessed highway junctions are used.
+
+Optional future preparation: `python manage.py enrich_stations --census` submits up to 10,000 unlocated addresses in one batch and persists only Exact results matching source city/state. `--refresh` reruns all stations. The raw response is saved locally as ignored `data/census-last-response.csv`; `--census-results <response.csv>` reapplies it offline. An external CSV crosswalk `source_id,latitude,longitude` is supported too. Run preparation separately from serving traffic with SQLite. Enrichment never runs inside customer requests. Further coverage requires additional verified locations; unresolved rows remain excluded.
 
 ## API
 
@@ -45,45 +59,47 @@ The original employer attachment and database are gitignored. Reviewers must obt
 {"origin":"Chicago, IL","destination":"Denver, CO","initial_fuel_gallons":50}
 ```
 
-Cities require a state when multiple states match. A location may instead be `{"latitude":41.85,"longitude":-87.65}`; coordinates are checked against US Census state boundaries. US states and DC are accepted; territories are excluded. The initial-fuel field defaults to 50 and accepts 0–50. A nonstation origin cannot sell fuel, so an empty tank requires a priced station projected at mile zero.
+Cities require a state when ambiguous. Coordinates are also accepted as `{"latitude":41.85,"longitude":-87.65}` and verified against US Census state/DC boundaries; territories are excluded. Initial fuel defaults to 50 and accepts 0–50. A nonstation origin cannot sell fuel.
 
-Responses contain resolved locations, route geometry/distance/duration, `fuel_stops`, fuel-leg checks, `total_purchased_gallons`, `total_purchase_cost_usd`, `trip_fuel_consumed_gallons`, destination balance, vehicle assumptions, `map_url` and metadata. Each purchase has station identity/location, projected route mile, price, gallons, cost and arrival/departure tank balances. Displayed money is a decimal string. A saved map is persisted in SQLite and can be reopened at `GET /map/<id>/`.
+Responses contain resolved locations, road GeoJSON/distance/duration, ordered stops with coordinate source/price/route mile/purchases/tank balances, every leg's arrival balance, gallons/cost/consumption/destination balance, assumptions, saved `map_url` and metadata. Money is a decimal string. Metadata measures provider calls, cache hits, milliseconds, corridor candidates and located/unlocated dataset counts. Saved maps persist at `GET /map/<id>/`; `GET /` is the planner and `GET /api/health/` reports dataset readiness/counts.
 
-`GET /api/health/` returns station counts and `dataset_ready`; `GET /` is the input/map page. Errors use `{"error":{"code":"...","message":"..."}}`: invalid JSON/input or ambiguous city 400, wrong method 405, wrong content type 415, infeasible fuel/no road route 422, upstream failure 502, missing data/database or provider rate limit 503. Upstream requests have a configurable timeout and no hidden retries.
+Errors use `{"error":{"code":"...","message":"..."}}`: bad input/ambiguous city 400, method 405, content type 415, infeasible subset/no road route 422, upstream 502, missing dataset/database/rate limit 503. Infeasibility in the loaded subset does not prove no real refueling trip exists. Calls have configurable timeouts and no hidden retries.
 
-## Algorithm and scope
+## Algorithm and assumptions
 
-1. Resolve/caches cities with Open-Meteo geocoding, or verify coordinates using US Census geographies. Resolved locations persist in SQLite.
-2. Make one OSRM driving route request with full GeoJSON geometry and road distance annotations; cache that response for one hour.
-3. Filter priced stations by the route bounding box. A local spatial grid narrows candidate polyline segments; project nearby station coordinates onto those segments. The default corridor is **2 miles** on either side. Road annotations determine route positions; if annotations are unavailable, geometric segment distances are scaled to the provider's road total and this approximation is reported.
-4. Sort stations by route position. Compute the first strictly cheaper station ahead using a monotone stack. At each station, buy enough to reach that cheaper station if within range; otherwise target a full tank, capped at remaining trip consumption. Subtract carried fuel before purchasing. Check every leg and reject infeasible routes. Zero-purchase stations are omitted from purchase markers.
+1. Resolve/cache cities with Open-Meteo or verify coordinates with US Census; geocodes persist in SQLite.
+2. Request one OSRM driving route with full geometry/road annotations, cached for one hour. A cold named route uses two geocoding calls plus one routing call; cached repeats need zero.
+3. Bounding-box filter located stations, use a spatial grid to narrow polyline segments, and project candidates within the **2-mile corridor** onto cumulative road distance. Without annotations, scale geometric lengths to the provider's total and report that approximation.
+4. Sort stations; a monotone stack finds the next cheaper station. Buy enough to reach it when within full-tank range; otherwise target capacity capped at remaining trip consumption, subtracting carried fuel. Verify every leg. Sorting O(n log n), fuel planning O(n).
 
-The purchase optimizer is exact for continuous fuel on this **single fixed route with zero detour costs**. Sorting is O(n log n), fuel planning O(n); it does not find a globally cheapest road route. Nearby stations are assumed accessible at their projected position. Access/return detours, highway exit connectivity and station opening times are omitted. The map draws the base route and station markers, not claimed exact detour roads. OSRM's generic driving profile does not certify commercial-truck legal access.
+The optimizer is exact for continuous fuel purchases on **one fixed route, zero station detour costs and the available located subset**. It does not search all road routes. Station detours, exit connectivity, hours and commercial-truck restrictions are unverified. The map shows the base route/markers, not exact detour roads. Initial fuel has economic value but is excluded from new purchase totals. Decimal accounting uses a 0.000001-gallon tolerance; line items round half-up to cents and their displayed sum defines the displayed total. An unrounded total is also returned.
 
-Initial fuel is **already owned**, excluded from new-purchase cost. Trip consumption is reported separately; zero purchases do not mean zero economic value of consumed fuel. Fuel uses Decimal arithmetic without intermediate rounding, with a 0.000001-gallon feasibility tolerance. Purchase line items round half-up to cents; their displayed sum defines the displayed total. An unrounded purchase total is also available.
+## Verified real demonstration
 
-## Checks and measured performance
+Chicago, IL → Denver, CO, initial 50 gallons, default 2-mile corridor, after rejecting Non_Exact results:
+
+| Result | Observed value |
+|---|---:|
+| Road distance | 1,004.765 miles |
+| Love's 426 Shelby IA, OPIS 69177 | mile430.854; buy8.821614gal; $32.19 |
+| Love's 309 Aurora NE, OPIS 66236 | mile588.216; buy41.654922gal; $137.00 |
+| New fuel purchases | **$169.19** |
+| Both purchase coordinate sources | official_loves_station_page |
+
+Geometry has 9,369 points / 9,368 road annotations. The initial live provider-only spike took **3,032.04 ms**,3 calls; a repeated provider-only pipeline took **4.59 ms**,0 calls. After actual station preparation, a complete warm HTTP API request took **27.98 ms**,0 calls,12 examined stations / 3 corridor candidates. These are single local observations, not throughput guarantees. Every response measures its own complete timing/calls. Provider route changes and accepted station coverage can change results.
+
+## Checks and submission
 
 ```powershell
 .\.venv\Scripts\python manage.py check
+.\.venv\Scripts\python manage.py makemigrations --check --dry-run
 .\.venv\Scripts\python manage.py test
 ```
 
-Fifteen automated tests cover short/exact-range/zero-fuel trips, cheaper stations, multi-stop accounting, infeasible gaps, projection, input/data validation, saved map rendering, country checks, geocode caching, importer handling (including tiny prices and quoted multiline addresses) and coordinate crosswalks. The optimizer is compared against an exhaustive integer-gallon dynamic program for 108 small cases, where integer gallons are sufficient for an exact oracle. External route/geocode integration is mocked in API tests.
+**19 tests pass**, covering fuel boundaries, multi-stop costs, infeasible gaps, 108 exhaustive oracle comparisons, road projection, API validation/maps, geocode/country checks, malformed locations/huge numbers, actual-style schema import, 8-place prices, duplicate/non-US policy, multiline addresses, coordinate persistence, Non_Exact rejection and Exact locality mismatch rejection. Providers are mocked in automated tests; live routing/geocoding/coordinate-country checks and the real multi-stop API were verified separately.
 
-Live integration observed on 2 November 2026: Chicago, IL → Denver, CO returned **1,004.77 road miles, 9,369 geometry points, 9,368 distance annotations**. Two uncached geocoding requests plus one route request took **3,032.04 ms**; the repeated provider pipeline used zero external calls and took **4.59 ms**. These are one local provider-pipeline observations, not complete station optimization latency or throughput claims. The actual API reports measured end-to-end timings and provider counts on every successful response. Station matching and real multi-stop live verification remain pending actual dataset availability.
+Use the committed Postman collection and `delivery/WALKTHROUGH.md` for the ≤5-minute Loom. Submit the actual [GitHub link](https://github.com/azeemamjad/spotter-backend-fuel-assessment) and a working Loom through the **backend** questionnaire. No Loom was fabricated or assessment form submitted.
 
-## Providers and submission
+## Attribution
 
-- [Django download/version](https://www.djangoproject.com/download/) and [Python compatibility](https://docs.djangoproject.com/en/6.1/faq/install/).
-- [OSRM Route API](https://project-osrm.org/docs/v5.24.0/api/#route-service). Public demo endpoint has no availability guarantee; use a suitable provider/self-hosting for production.
-- [Open-Meteo geocoding](https://open-meteo.com/en/docs/geocoding-api) uses GeoNames data. Check current service terms for hosted/commercial use.
-- [US Census geocoding](https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html) for verified US coordinates and batch street-address enrichment.
-- Leaflet 1.9.4 and OpenStreetMap tiles/contributors with attribution in the map. Public tile services and CDN access require internet.
-
-GitHub repository and Loom links have not been created by this implementation. Record a ≤5-minute walkthrough using Postman, explain initial fuel and approximation scope, show a real multi-stop request/map, importer/tests and measured request budget, then submit working links through the backend questionnaire. See the root `SUBMISSION.md` and Postman collection for the remaining external deliverables. The employer dataset is the material outstanding local dependency.
-
-## Repository access
-
-GitHub: [azeemamjad/spotter-backend-fuel-assessment](https://github.com/azeemamjad/spotter-backend-fuel-assessment), created private. Grant the hiring team access before submission. A real accessible Loom recording of at most five minutes is still required; it has not been generated or submitted by this repository.
-
+[Django stable release](https://www.djangoproject.com/download/) · [OSRM](https://project-osrm.org/docs/v5.24.0/api/#route-service) · [Open-Meteo/GeoNames](https://open-meteo.com/en/docs/geocoding-api) · [US Census](https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html) · [OpenFreeMap](https://openfreemap.org/quick_start/) · MapLibre GL JS 5.6.1. OpenFreeMap styles include OpenMapTiles/OpenStreetMap attribution. Check service availability/terms for production; public demo services carry no availability guarantee. The map requires internet/WebGL.

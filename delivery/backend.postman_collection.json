@@ -24,7 +24,7 @@
         "header": [{ "key": "Content-Type", "value": "application/json" }],
         "body": { "mode": "raw", "raw": "{\n  \"origin\": \"Chicago, IL, USA\",\n  \"destination\": \"Denver, CO, USA\",\n  \"initial_fuel_gallons\": 50\n}" },
         "url": "{{base_url}}/api/route-plan/",
-        "description": "Inspect each purchase and open the returned map_url in a browser. Repeat to see cache diagnostics. For a several-purchase demo, edit the destination to a longer route supported by the real station coverage."
+        "description": "Use final verified station coordinates from the original dataset, inspect the actual response and open map_url; repeat for cache diagnostics. Partial station geocoding and ignored station detours are disclosed in the README. A preliminary Minneapolis–Dallas result using rejected non-exact Census matches is not a valid demonstration."
       },
       "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": [
         "pm.test('A feasible real-data plan is returned', () => pm.response.to.have.status(200));",

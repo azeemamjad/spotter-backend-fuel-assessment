@@ -9,6 +9,7 @@ from pathlib import Path
 from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
 from stations.models import Station
+from routing.providers import STATE_NAMES
 
 def normalized(value):
     return re.sub(r'[^a-z0-9]', '', value.lower())
@@ -43,8 +44,8 @@ class Command(BaseCommand):
             for required in ('name', 'address', 'price'):
                 if not mapping.get(required) or mapping[required] not in headers:
                     raise CommandError(f'Missing {required} column. Actual headers: {headers}. Supply --columns JSON.')
-            report = {'headers': headers, 'mapping': mapping, 'rows': 0, 'created': 0, 'updated': 0, 'duplicate_rows': 0, 'invalid_rows': 0, 'missing_coordinates': 0, 'invalid_examples': []}
-            seen = set()
+            report = {'headers': headers, 'mapping': mapping, 'rows': 0, 'created': 0, 'updated': 0, 'duplicate_rows': 0, 'conflicting_duplicate_rows': 0, 'non_us_rows': 0, 'invalid_rows': 0, 'missing_coordinates': 0, 'invalid_examples': []}
+            seen = {}
             with transaction.atomic():
                 for row_number,row in enumerate(reader,2):
                     report['rows'] += 1
@@ -54,15 +55,20 @@ class Command(BaseCommand):
                         price = Decimal(cell('price').replace('$','').replace(',',''))
                         if not price.is_finite() or not 0 < price < 10000:
                             raise ValueError('Price must be finite and positive.')
-                        price = price.quantize(Decimal('.0001'))
+                        price = price.quantize(Decimal('.00000001'))
                         if not 0 < price < 10000:
-                            raise ValueError('Price must remain positive and below 10000 at four decimal places.')
+                            raise ValueError('Price must remain positive and below 10000 at eight decimal places.')
                         name, address, city, state = cell('name'),cell('address'),cell('city'),cell('state')
+                        if state and state.upper() not in STATE_NAMES and state not in STATE_NAMES.values():
+                            report['non_us_rows'] += 1
+                            continue
                         if not name or not address:
                             raise ValueError('Station name and address are required.')
                         identity = cell('source_id') or hashlib.sha256('|'.join([name,address,city,state]).casefold().encode()).hexdigest()
+                        signature=(name,address,city,state,str(price))
                         if identity in seen:
                             report['duplicate_rows'] += 1
+                            report['conflicting_duplicate_rows'] += int(seen[identity]!=signature)
                             continue
                         latitude,longitude,coordinate_source = None,None,''
                         if cell('latitude') or cell('longitude'):
@@ -77,7 +83,7 @@ class Command(BaseCommand):
                         station,created = Station.objects.update_or_create(source_id=identity,defaults=defaults)
                         report['created' if created else 'updated'] += 1
                         report['missing_coordinates'] += int(station.latitude is None or station.longitude is None)
-                        seen.add(identity)
+                        seen[identity]=signature
                     except (InvalidOperation, ValueError, TypeError) as exc:
                         report['invalid_rows'] += 1
                         if len(report['invalid_examples']) < 10:

@@ -17,6 +17,11 @@ class ApiTests(TestCase):
         self.assertEqual(self.client.get('/api/health/').json()['dataset_ready'],False)
         self.assertEqual(self.client.get('/').status_code,200)
         self.assertEqual(self.client.get('/api/route-plan/').status_code,405)
+        self.assertEqual(self.post({'origin':'A','destination':'B','initial_fuel_gallons':10**400}).status_code,400)
+
+    def test_malformed_location_validation(self):
+        for value in (',,',{'latitude':10**400,'longitude':0}):
+            with self.assertRaises(PlanError):resolve_location(value,{})
 
     @patch('routing.views.road_route',return_value=ROUTE)
     @patch('routing.views.resolve_location')

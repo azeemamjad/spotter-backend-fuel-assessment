@@ -1,0 +1,1104 @@
+[
+  {
+    "source_id": "1646",
+    "latitude": 41.449647984335,
+    "longitude": -86.310107021643,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 41.449647984335,
+      "longitude": -86.310107021643,
+      "match_type": "Exact",
+      "matched_address": "US HWY 6 & US HWY 31, PLYMOUTH, IN, 46563",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.467308+00:00"
+    }
+  },
+  {
+    "source_id": "2078",
+    "latitude": 33.462574494693,
+    "longitude": -101.675153010825,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 33.462574494693,
+      "longitude": -101.675153010825,
+      "match_type": "Exact",
+      "matched_address": "US HWY 84 & CO RD 3300, SLATON, TX, 79364",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.470453+00:00"
+    }
+  },
+  {
+    "source_id": "3413",
+    "latitude": 31.957016618575,
+    "longitude": -92.653433423537,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 31.957016618575,
+      "longitude": -92.653433423537,
+      "match_type": "Exact",
+      "matched_address": "US HWY 167 & STATE RTE 156, WINNFIELD, LA, 71483",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.470738+00:00"
+    }
+  },
+  {
+    "source_id": "469",
+    "latitude": 37.472986353745,
+    "longitude": -105.857356134482,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 37.472986353745,
+      "longitude": -105.857356134482,
+      "match_type": "Exact",
+      "matched_address": "US HWY 160 & STATE HWY 17, ALAMOSA, CO, 81101",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.466146+00:00"
+    }
+  },
+  {
+    "source_id": "60442",
+    "latitude": 41.619409983721,
+    "longitude": -88.447859986294,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 41.619409983721,
+      "longitude": -88.447859986294,
+      "match_type": "Exact",
+      "matched_address": "STATE RTE 71 & STATE RTE 47, YORKVILLE, IL, 60560",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.467000+00:00"
+    }
+  },
+  {
+    "source_id": "63546",
+    "latitude": 32.932089979316,
+    "longitude": -82.807303001719,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 32.932089979316,
+      "longitude": -82.807303001719,
+      "match_type": "Exact",
+      "matched_address": "STATE RTE 15 & STATE RTE 68, TENNILLE, GA, 31089",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.470121+00:00"
+    }
+  },
+  {
+    "source_id": "64139",
+    "latitude": 30.923133497088,
+    "longitude": -88.508985500344,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 30.923133497088,
+      "longitude": -88.508985500344,
+      "match_type": "Exact",
+      "matched_address": "US HWY 98 & HOLT RD, LUCEDALE, MS, 39452",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.467170+00:00"
+    }
+  },
+  {
+    "source_id": "64216",
+    "latitude": 42.293719991211,
+    "longitude": -76.715276034571,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 42.293719991211,
+      "longitude": -76.715276034571,
+      "match_type": "Exact",
+      "matched_address": "STATE RTE 13 & STATE RTE 224, CAYUTA, NY, 14824",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.467451+00:00"
+    }
+  },
+  {
+    "source_id": "64264",
+    "latitude": 34.158360001914,
+    "longitude": -97.982105974638,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 34.158360001914,
+      "longitude": -97.982105974638,
+      "match_type": "Exact",
+      "matched_address": "US HWY 81 & US HWY 70, WAURIKA, OK, 73573",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.467520+00:00"
+    }
+  },
+  {
+    "source_id": "64314",
+    "latitude": 44.008009013962,
+    "longitude": -97.388330981149,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 44.008009013962,
+      "longitude": -97.388330981149,
+      "match_type": "Exact",
+      "matched_address": "US HWY 81 & STATE HWY 34, WINFRED, SD, 57076",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.467899+00:00"
+    }
+  },
+  {
+    "source_id": "64581",
+    "latitude": 34.119726998224,
+    "longitude": -86.395255020498,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 34.119726998224,
+      "longitude": -86.395255020498,
+      "match_type": "Exact",
+      "matched_address": "US HWY 278 & AL HIGHWAY 75, ALTOONA, AL, 35952",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.468854+00:00"
+    }
+  },
+  {
+    "source_id": "64660",
+    "latitude": 43.013988019455,
+    "longitude": -88.200341977699,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 43.013988019455,
+      "longitude": -88.200341977699,
+      "match_type": "Exact",
+      "matched_address": "STATE HWY 59 & STATE HWY 164, WAUKESHA, WI, 53186",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.469397+00:00"
+    }
+  },
+  {
+    "source_id": "64881",
+    "latitude": 42.748795014886,
+    "longitude": -95.151197018135,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 42.748795014886,
+      "longitude": -95.151197018135,
+      "match_type": "Exact",
+      "matched_address": "US HWY 71 & STATE HWY 3, STORM LAKE, IA, 50588",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.470126+00:00"
+    }
+  },
+  {
+    "source_id": "64964",
+    "latitude": 37.474813999878,
+    "longitude": -100.870928970379,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 37.474813999878,
+      "longitude": -100.870928970379,
+      "match_type": "Exact",
+      "matched_address": "US HWY 83 & US HWY 56, SUBLETTE, KS, 67877",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.470534+00:00"
+    }
+  },
+  {
+    "source_id": "65293",
+    "latitude": 40.182639508061,
+    "longitude": -101.013115992321,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 40.182639508061,
+      "longitude": -101.013115992321,
+      "match_type": "Exact",
+      "matched_address": "US HWY 34 & STATE HWY 25, TRENTON, NE, 69044",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.466335+00:00"
+    }
+  },
+  {
+    "source_id": "65624",
+    "latitude": 36.386680994676,
+    "longitude": -87.631005972133,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 36.386680994676,
+      "longitude": -87.631005972133,
+      "match_type": "Exact",
+      "matched_address": "STATE HWY 149 & STATE HWY 46, CUMBERLAND CITY, TN, 37050",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.468085+00:00"
+    }
+  },
+  {
+    "source_id": "65793",
+    "latitude": 44.024846985855,
+    "longitude": -89.810509010552,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 44.024846985855,
+      "longitude": -89.810509010552,
+      "match_type": "Exact",
+      "matched_address": "STATE HWY 13 & STATE HWY 21, FRIENDSHIP, WI, 53934",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.468467+00:00"
+    }
+  },
+  {
+    "source_id": "65969",
+    "latitude": 30.788511360328,
+    "longitude": -92.179971156418,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 30.788511360328,
+      "longitude": -92.179971156418,
+      "match_type": "Exact",
+      "matched_address": "STATE RTE 29 & STATE RTE 182, BUNKIE, LA, 71322",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.469370+00:00"
+    }
+  },
+  {
+    "source_id": "66236",
+    "latitude": 40.818908,
+    "longitude": -97.99827,
+    "provenance": {
+      "provider": "official_loves_station_page",
+      "source_url": "https://www.loves.com/locations/ne/aurora/loves-travel-stop-aurora-309",
+      "method": "Exact OPIS station ID and official linked map coordinates",
+      "retrieved_at": "2026-11-02",
+      "latitude": 40.818908,
+      "longitude": -97.99827
+    }
+  },
+  {
+    "source_id": "66776",
+    "latitude": 41.081993992117,
+    "longitude": -83.401178992288,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 41.081993992117,
+      "longitude": -83.401178992288,
+      "match_type": "Exact",
+      "matched_address": "US HWY 224 & US HWY 23, ALVADA, OH, 44802",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.467132+00:00"
+    }
+  },
+  {
+    "source_id": "67208",
+    "latitude": 43.315152982602,
+    "longitude": -90.350497961519,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 43.315152982602,
+      "longitude": -90.350497961519,
+      "match_type": "Exact",
+      "matched_address": "US HWY 14 & CO HWY O, RICHLAND CENTER, WI, 53581",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.470287+00:00"
+    }
+  },
+  {
+    "source_id": "67284",
+    "latitude": 41.10262,
+    "longitude": -100.72389,
+    "provenance": {
+      "provider": "official_loves_station_page",
+      "source_url": "https://www.loves.com/locations/ne/north-platte/loves-travel-stop-north-platte-390",
+      "method": "Exact OPIS station ID and official linked map coordinates",
+      "retrieved_at": "2026-11-02",
+      "latitude": 41.10262,
+      "longitude": -100.72389
+    }
+  },
+  {
+    "source_id": "67311",
+    "latitude": 46.852890010132,
+    "longitude": -92.280402972635,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 46.852890010132,
+      "longitude": -92.280402972635,
+      "match_type": "Exact",
+      "matched_address": "US HWY 53 & CO HWY 13, DULUTH, MN, 55811",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.470695+00:00"
+    }
+  },
+  {
+    "source_id": "67650",
+    "latitude": 39.953428491717,
+    "longitude": -90.20739047391,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 39.953428491717,
+      "longitude": -90.20739047391,
+      "match_type": "Exact",
+      "matched_address": "STATE RTE 78 & STATE RTE 125, VIRGINIA, IL, 62691",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.465829+00:00"
+    }
+  },
+  {
+    "source_id": "67682",
+    "latitude": 39.45877750826,
+    "longitude": -98.0927534003,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 39.45877750826,
+      "longitude": -98.0927534003,
+      "match_type": "Exact",
+      "matched_address": "1323 E MAIN ST, BELOIT, KS, 67420",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.465672+00:00"
+    }
+  },
+  {
+    "source_id": "67721",
+    "latitude": 42.37120599347,
+    "longitude": -88.851541971081,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 42.37120599347,
+      "longitude": -88.851541971081,
+      "match_type": "Exact",
+      "matched_address": "STATE RTE 76 & STATE RTE 173, POPLAR GROVE, IL, 61065",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.466072+00:00"
+    }
+  },
+  {
+    "source_id": "67728",
+    "latitude": 35.312365993118,
+    "longitude": -77.161203041079,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 35.312365993118,
+      "longitude": -77.161203041079,
+      "match_type": "Exact",
+      "matched_address": "STATE HWY 43 & STATE HWY 118, VANCEBORO, NC, 28586",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.466080+00:00"
+    }
+  },
+  {
+    "source_id": "67933",
+    "latitude": 28.555179981175,
+    "longitude": -82.054700024577,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 28.555179981175,
+      "longitude": -82.054700024577,
+      "match_type": "Exact",
+      "matched_address": "STATE HWY 50 & STATE HWY 471, WEBSTER, FL, 33597",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.466947+00:00"
+    }
+  },
+  {
+    "source_id": "68048",
+    "latitude": 42.808000497146,
+    "longitude": -95.799610470191,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 42.808000497146,
+      "longitude": -95.799610470191,
+      "match_type": "Exact",
+      "matched_address": "HWY 3 & HWY 143, MARCUS, IA, 51035",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.469108+00:00"
+    }
+  },
+  {
+    "source_id": "68081",
+    "latitude": 29.677567013932,
+    "longitude": -90.541476993572,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 29.677567013932,
+      "longitude": -90.541476993572,
+      "match_type": "Exact",
+      "matched_address": "STATE RTE 308 & HWY 654, MATHEWS, LA, 70375",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.468887+00:00"
+    }
+  },
+  {
+    "source_id": "68671",
+    "latitude": 40.625745397042,
+    "longitude": -97.595799010482,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 40.625745397042,
+      "longitude": -97.595799010482,
+      "match_type": "Exact",
+      "matched_address": "US HWY 81 & RD F, FAIRMONT, NE, 68354",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.470793+00:00"
+    }
+  },
+  {
+    "source_id": "68693",
+    "latitude": 30.000288002563,
+    "longitude": -91.052571015644,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 30.000288002563,
+      "longitude": -91.052571015644,
+      "match_type": "Exact",
+      "matched_address": "HWY 70 & STATE RTE 308, BELLE ROSE, LA, 70341",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.470834+00:00"
+    }
+  },
+  {
+    "source_id": "68937",
+    "latitude": 41.708296004132,
+    "longitude": -78.69401396406,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 41.708296004132,
+      "longitude": -78.69401396406,
+      "match_type": "Exact",
+      "matched_address": "US HWY 6 & US HWY 219, KANE, PA, 16735",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.465749+00:00"
+    }
+  },
+  {
+    "source_id": "69177",
+    "latitude": 41.496978,
+    "longitude": -95.451919,
+    "provenance": {
+      "provider": "official_loves_station_page",
+      "source_url": "https://www.loves.com/locations/ia/shelby/loves-travel-stop-shelby-426",
+      "method": "Exact OPIS station ID and official linked map coordinates",
+      "retrieved_at": "2026-11-02",
+      "latitude": 41.496978,
+      "longitude": -95.451919
+    }
+  },
+  {
+    "source_id": "69446",
+    "latitude": 32.742124498704,
+    "longitude": -92.429569512623,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 32.742124498704,
+      "longitude": -92.429569512623,
+      "match_type": "Exact",
+      "matched_address": "STATE RTE 33 & STATE RTE 15, FARMERVILLE, LA, 71241",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.469412+00:00"
+    }
+  },
+  {
+    "source_id": "69495",
+    "latitude": 35.759097002768,
+    "longitude": -95.402565967751,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 35.759097002768,
+      "longitude": -95.402565967751,
+      "match_type": "Exact",
+      "matched_address": "US HWY 69 & US HWY 62, MUSKOGEE, OK, 74401",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.469517+00:00"
+    }
+  },
+  {
+    "source_id": "69630",
+    "latitude": 32.043820980554,
+    "longitude": -93.692163958411,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 32.043820980554,
+      "longitude": -93.692163958411,
+      "match_type": "Exact",
+      "matched_address": "STATE RTE 175 & STATE RTE 509, MANSFIELD, LA, 71052",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.469598+00:00"
+    }
+  },
+  {
+    "source_id": "69686",
+    "latitude": 39.953428491717,
+    "longitude": -90.20739047391,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 39.953428491717,
+      "longitude": -90.20739047391,
+      "match_type": "Exact",
+      "matched_address": "STATE RTE 125 & STATE RTE 78, VIRGINIA, IL, 62691",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.470154+00:00"
+    }
+  },
+  {
+    "source_id": "69710",
+    "latitude": 41.109221,
+    "longitude": -102.950521,
+    "provenance": {
+      "provider": "official_loves_station_page",
+      "source_url": "https://www.loves.com/locations/ne/sidney/loves-travel-stop-sidney-625",
+      "method": "Exact OPIS station ID and official linked map coordinates",
+      "retrieved_at": "2026-11-02",
+      "latitude": 41.109221,
+      "longitude": -102.950521
+    }
+  },
+  {
+    "source_id": "69782",
+    "latitude": 42.961017015919,
+    "longitude": -76.846319035565,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 42.961017015919,
+      "longitude": -76.846319035565,
+      "match_type": "Exact",
+      "matched_address": "STATE RTE 414 & STATE RTE 318, WATERLOO, NY, 13165",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.470023+00:00"
+    }
+  },
+  {
+    "source_id": "69824",
+    "latitude": 30.546658503766,
+    "longitude": -91.967459500961,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 30.546658503766,
+      "longitude": -91.967459500961,
+      "match_type": "Exact",
+      "matched_address": "US HWY 190 & STATE RTE 103, PORT BARRE, LA, 70577",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.470496+00:00"
+    }
+  },
+  {
+    "source_id": "69923",
+    "latitude": 29.522725992347,
+    "longitude": -98.805802992043,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 29.522725992347,
+      "longitude": -98.805802992043,
+      "match_type": "Exact",
+      "matched_address": "FM 471 & STATE HWY 211, SAN ANTONIO, TX, 78253",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.470874+00:00"
+    }
+  },
+  {
+    "source_id": "70062",
+    "latitude": 43.013988019455,
+    "longitude": -88.200341977699,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 43.013988019455,
+      "longitude": -88.200341977699,
+      "match_type": "Exact",
+      "matched_address": "STATE HWY 164 & STATE HWY 59, WAUKESHA, WI, 53186",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.467628+00:00"
+    }
+  },
+  {
+    "source_id": "70066",
+    "latitude": 43.015460350885,
+    "longitude": -89.472745521913,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 43.015460350885,
+      "longitude": -89.472745521913,
+      "match_type": "Exact",
+      "matched_address": "US HWY 18 & CO HWY PD, MADISON, WI, 53711",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.467614+00:00"
+    }
+  },
+  {
+    "source_id": "70075",
+    "latitude": 45.532269996085,
+    "longitude": -92.031468006499,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 45.532269996085,
+      "longitude": -92.031468006499,
+      "match_type": "Exact",
+      "matched_address": "US HWY 63 & STATE HWY 48, CUMBERLAND, WI, 54829",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.467642+00:00"
+    }
+  },
+  {
+    "source_id": "70096",
+    "latitude": 34.194744994364,
+    "longitude": -91.921565041677,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 34.194744994364,
+      "longitude": -91.921565041677,
+      "match_type": "Exact",
+      "matched_address": "US HWY 65 & STATE HWY 81, PINE BLUFF, AR, 71601",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.467676+00:00"
+    }
+  },
+  {
+    "source_id": "70268",
+    "latitude": 41.336878001781,
+    "longitude": -92.18094496738,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 41.336878001781,
+      "longitude": -92.18094496738,
+      "match_type": "Exact",
+      "matched_address": "STATE HWY 92 & STATE HWY 149, SIGOURNEY, IA, 52591",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.468736+00:00"
+    }
+  },
+  {
+    "source_id": "70549",
+    "latitude": 32.966500688621,
+    "longitude": -102.819024021699,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 32.966500688621,
+      "longitude": -102.819024021699,
+      "match_type": "Exact",
+      "matched_address": "214 PLAINS HWY, DENVER CITY, TX, 79323",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.469803+00:00"
+    }
+  },
+  {
+    "source_id": "70590",
+    "latitude": 29.756480995029,
+    "longitude": -81.312762040345,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 29.756480995029,
+      "longitude": -81.312762040345,
+      "match_type": "Exact",
+      "matched_address": "US HWY 1 & STATE HWY 206, SAINT AUGUSTINE, FL, 32086",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.469874+00:00"
+    }
+  },
+  {
+    "source_id": "70746",
+    "latitude": 40.872727997956,
+    "longitude": -97.997800478107,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 40.872727997956,
+      "longitude": -97.997800478107,
+      "match_type": "Exact",
+      "matched_address": "US HWY 34 & STATE HWY 14, AURORA, NE, 68818",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.469968+00:00"
+    }
+  },
+  {
+    "source_id": "70794",
+    "latitude": 40.939472998155,
+    "longitude": -83.402696505529,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 40.939472998155,
+      "longitude": -83.402696505529,
+      "match_type": "Exact",
+      "matched_address": "STATE RTE 103 & CO HWY 96, CAREY, OH, 43316",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.470602+00:00"
+    }
+  },
+  {
+    "source_id": "7084",
+    "latitude": 45.459470007668,
+    "longitude": -98.51544003781,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 45.459470007668,
+      "longitude": -98.51544003781,
+      "match_type": "Exact",
+      "matched_address": "US HWY 12 & US HWY 281, ABERDEEN, SD, 57401",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.471061+00:00"
+    }
+  },
+  {
+    "source_id": "70875",
+    "latitude": 30.246995985105,
+    "longitude": -94.742124972143,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 30.246995985105,
+      "longitude": -94.742124972143,
+      "match_type": "Exact",
+      "matched_address": "STATE HWY 105 & STATE HWY 146, LIBERTY, TX, 77575",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.470335+00:00"
+    }
+  },
+  {
+    "source_id": "71074",
+    "latitude": 42.093528012565,
+    "longitude": -88.257857001098,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 42.093528012565,
+      "longitude": -88.257857001098,
+      "match_type": "Exact",
+      "matched_address": "STATE RTE 72 & STATE RTE 25, DUNDEE, IL, 60118",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.466594+00:00"
+    }
+  },
+  {
+    "source_id": "71098",
+    "latitude": 41.774125017723,
+    "longitude": -76.399452012528,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 41.774125017723,
+      "longitude": -76.399452012528,
+      "match_type": "Exact",
+      "matched_address": "US HWY 6 & STATE RTE 187, WYSOX, PA, 18854",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.466361+00:00"
+    }
+  },
+  {
+    "source_id": "71187",
+    "latitude": 42.698279984158,
+    "longitude": -87.914604022642,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 42.698279984158,
+      "longitude": -87.914604022642,
+      "match_type": "Exact",
+      "matched_address": "STATE HWY 11 & CO RD H, STURTEVANT, WI, 53177",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.466925+00:00"
+    }
+  },
+  {
+    "source_id": "71232",
+    "latitude": 43.848873006949,
+    "longitude": -104.184336968676,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 43.848873006949,
+      "longitude": -104.184336968676,
+      "match_type": "Exact",
+      "matched_address": "US HWY 16 & US HWY 85, NEWCASTLE, WY, 82701",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.467376+00:00"
+    }
+  },
+  {
+    "source_id": "71371",
+    "latitude": 38.741999989878,
+    "longitude": -93.22609399625,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 38.741999989878,
+      "longitude": -93.22609399625,
+      "match_type": "Exact",
+      "matched_address": "US HWY 65 & STATE HWY HH, SEDALIA, MO, 65301",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.467577+00:00"
+    }
+  },
+  {
+    "source_id": "71774",
+    "latitude": 39.290721650305,
+    "longitude": -90.407005813303,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 39.290721650305,
+      "longitude": -90.407005813303,
+      "match_type": "Exact",
+      "matched_address": "1020 5TH ST, CARROLLTON, IL, 62016",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.469437+00:00"
+    }
+  },
+  {
+    "source_id": "71923",
+    "latitude": 39.723313997806,
+    "longitude": -82.986466965939,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 39.723313997806,
+      "longitude": -82.986466965939,
+      "match_type": "Exact",
+      "matched_address": "US HWY 23 & STATE RTE 752, ASHVILLE, OH, 43103",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.469567+00:00"
+    }
+  },
+  {
+    "source_id": "71968",
+    "latitude": 30.719463993064,
+    "longitude": -85.02016450799,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 30.719463993064,
+      "longitude": -85.02016450799,
+      "match_type": "Exact",
+      "matched_address": "US HWY 90 & STATE HWY 69, GRAND RIDGE, FL, 32442",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.469672+00:00"
+    }
+  },
+  {
+    "source_id": "72039",
+    "latitude": 30.390218000518,
+    "longitude": -84.798172016795,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 30.390218000518,
+      "longitude": -84.798172016795,
+      "match_type": "Exact",
+      "matched_address": "STATE HWY 20 & STATE HWY 65, HOSFORD, FL, 32334",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.465552+00:00"
+    }
+  },
+  {
+    "source_id": "72067",
+    "latitude": 29.355720001192,
+    "longitude": -98.871439990787,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 29.355720001192,
+      "longitude": -98.871439990787,
+      "match_type": "Exact",
+      "matched_address": "US HWY 90 & FM 471, CASTROVILLE, TX, 78009",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.465372+00:00"
+    }
+  },
+  {
+    "source_id": "72153",
+    "latitude": 32.3800939935,
+    "longitude": -82.592880009338,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 32.3800939935,
+      "longitude": -82.592880009338,
+      "match_type": "Exact",
+      "matched_address": "STATE RTE 15 & STATE RTE 46, SOPERTON, GA, 30457",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.465936+00:00"
+    }
+  },
+  {
+    "source_id": "72215",
+    "latitude": 43.055536020867,
+    "longitude": -76.558076032139,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 43.055536020867,
+      "longitude": -76.558076032139,
+      "match_type": "Exact",
+      "matched_address": "STATE RTE 31 & STATE RTE 34, WEEDSPORT, NY, 13166",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.466156+00:00"
+    }
+  },
+  {
+    "source_id": "72259",
+    "latitude": 42.093528012565,
+    "longitude": -88.257857001098,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 42.093528012565,
+      "longitude": -88.257857001098,
+      "match_type": "Exact",
+      "matched_address": "STATE RTE 72 & STATE RTE 25, DUNDEE, IL, 60118",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.466208+00:00"
+    }
+  },
+  {
+    "source_id": "72289",
+    "latitude": 30.192961986054,
+    "longitude": -93.89600098631,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 30.192961986054,
+      "longitude": -93.89600098631,
+      "match_type": "Exact",
+      "matched_address": "STATE HWY 12 & FM 1136, ORANGE, TX, 77632",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.466242+00:00"
+    }
+  },
+  {
+    "source_id": "72292",
+    "latitude": 29.94639198368,
+    "longitude": -82.424798024189,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 29.94639198368,
+      "longitude": -82.424798024189,
+      "match_type": "Exact",
+      "matched_address": "STATE HWY 121 & CO RD 18, LAKE BUTLER, FL, 32054",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.466053+00:00"
+    }
+  },
+  {
+    "source_id": "72305",
+    "latitude": 37.000922985893,
+    "longitude": -91.682798015388,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 37.000922985893,
+      "longitude": -91.682798015388,
+      "match_type": "Exact",
+      "matched_address": "US HWY 60 & CO RD 3500, MOUNTAIN VIEW, MO, 65548",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.466611+00:00"
+    }
+  },
+  {
+    "source_id": "72362",
+    "latitude": 40.771004004324,
+    "longitude": -98.378408993789,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 40.771004004324,
+      "longitude": -98.378408993789,
+      "match_type": "Exact",
+      "matched_address": "US HWY 281 & CO RD 11, DONIPHAN, NE, 68832",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.466529+00:00"
+    }
+  },
+  {
+    "source_id": "72446",
+    "latitude": 41.708296004132,
+    "longitude": -78.69401396406,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 41.708296004132,
+      "longitude": -78.69401396406,
+      "match_type": "Exact",
+      "matched_address": "US HWY 219 & US HWY 6, KANE, PA, 16735",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.467035+00:00"
+    }
+  },
+  {
+    "source_id": "72481",
+    "latitude": 44.29786001549,
+    "longitude": -92.790770984468,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 44.29786001549,
+      "longitude": -92.790770984468,
+      "match_type": "Exact",
+      "matched_address": "STATE HWY 57 & STATE HWY 60, WANAMINGO, MN, 55983",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.466879+00:00"
+    }
+  },
+  {
+    "source_id": "72687",
+    "latitude": 44.541359999476,
+    "longitude": -95.077904016864,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 44.541359999476,
+      "longitude": -95.077904016864,
+      "match_type": "Exact",
+      "matched_address": "US HWY 71 & AIRPORT RD, REDWOOD FALLS, MN, 56283",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.467825+00:00"
+    }
+  },
+  {
+    "source_id": "72875",
+    "latitude": 30.724772020717,
+    "longitude": -97.673033005577,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 30.724772020717,
+      "longitude": -97.673033005577,
+      "match_type": "Exact",
+      "matched_address": "STATE HWY 195 & SHELL RD, GEORGETOWN, TX, 78628",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.468644+00:00"
+    }
+  },
+  {
+    "source_id": "72945",
+    "latitude": 30.355677994942,
+    "longitude": -87.683055981965,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 30.355677994942,
+      "longitude": -87.683055981965,
+      "match_type": "Exact",
+      "matched_address": "STATE RTE 59 & CO RD 12, FOLEY, AL, 36535",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.468340+00:00"
+    }
+  },
+  {
+    "source_id": "73008",
+    "latitude": 30.093519994692,
+    "longitude": -97.693875974487,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 30.093519994692,
+      "longitude": -97.693875974487,
+      "match_type": "Exact",
+      "matched_address": "US HWY 183 & FM 1327, AUSTIN, TX, 78747",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.470572+00:00"
+    }
+  },
+  {
+    "source_id": "73074",
+    "latitude": 33.388264004071,
+    "longitude": -94.108997995652,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 33.388264004071,
+      "longitude": -94.108997995652,
+      "match_type": "Exact",
+      "matched_address": "US HWY 59 & FM 989, TEXARKANA, TX, 75501",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.470484+00:00"
+    }
+  },
+  {
+    "source_id": "7724",
+    "latitude": 41.341280995867,
+    "longitude": -83.417290994764,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 41.341280995867,
+      "longitude": -83.417290994764,
+      "match_type": "Exact",
+      "matched_address": "US HWY 6 & US HWY 23, BRADNER, OH, 43406",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.467108+00:00"
+    }
+  },
+  {
+    "source_id": "9842",
+    "latitude": 37.921582993712,
+    "longitude": -95.170011037957,
+    "provenance": {
+      "provider": "US_Census_addressbatch",
+      "latitude": 37.921582993712,
+      "longitude": -95.170011037957,
+      "match_type": "Exact",
+      "matched_address": "US HWY 59 & US HWY 54, MORAN, KS, 66755",
+      "benchmark": "Public_AR_Current",
+      "retrieved_at": "2026-11-02T16:55:44.465463+00:00"
+    }
+  }
+]

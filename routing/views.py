@@ -59,7 +59,7 @@ def route_plan(request):
             initial = float(initial)
             if not math.isfinite(initial) or not 0 <= initial <= 50:
                 raise ValueError
-        except (ValueError, TypeError):
+        except (ValueError, TypeError, OverflowError):
             raise PlanError('invalid_input', 'initial_fuel_gallons must be a number between 0 and 50.')
         # Fail before spending provider calls when the required real dataset is not ready.
         if not Station.objects.filter(latitude__isnull=False, longitude__isnull=False).exists():
@@ -69,6 +69,9 @@ def route_plan(request):
         destination = resolve_location(payload['destination'], stats)
         route = road_route(origin, destination, stats)
         candidates, matching = match_stations(route)
+        total_stations=Station.objects.count()
+        located_stations=Station.objects.filter(latitude__isnull=False,longitude__isnull=False).count()
+        matching.update({'total_priced_stations':total_stations,'geolocated_stations':located_stations,'unlocated_stations':total_stations-located_stations,'optimization_scope':'Only the geolocated imported station subset; incomplete nationwide coverage.'})
         result = optimize(route['distance_miles'], candidates, initial)
         plan_id = uuid.uuid4()
         result.update({'id': str(plan_id), 'origin': origin, 'destination': destination, 'route': {k:v for k,v in route.items() if k != 'segment_distances_meters'}, 'map_url': request.build_absolute_uri(f'/map/{plan_id}/'), 'assumptions': ['Minimizes new fuel purchases on the single selected road route.', 'Nearby stations are projected onto the route. Station access/detour mileage is omitted; actual highway access and commercial-truck legality are not verified.', 'Initial fuel is already owned and excluded from purchase cost. Consumption is reported separately.', 'Money uses Decimal arithmetic, half-up cents per purchase; total sums displayed purchases.'], 'metadata': {**stats, **matching, 'elapsed_ms': round((time.perf_counter()-started)*1000, 2), 'providers': {'routing': 'OSRM driving', 'geocoding': 'Open-Meteo cities / US Census coordinates'}, 'external_request_count': stats['routing_requests'] + stats['geocoding_requests']}})
